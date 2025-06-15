@@ -3,144 +3,99 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Work From Home | Female 25+ Only</title>
+  <title>Work From Home | Earn Online</title>
+  <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #ff4e50;
-      --secondary: #f9d423;
+      --primary: #ff7b00;
+      --secondary: #ffb700;
       --dark: #1e1e1e;
-      --light: #ffffff;
-      --accent: #34d1bf;
+      --light: #fafafa;
     }
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Roboto', sans-serif;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; }
     body {
       background: linear-gradient(135deg, var(--primary), var(--secondary));
-      color: var(--dark);
+      color: var(--light);
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      padding: 2rem;
-    }
-    .card {
-      background: var(--light);
-      border-radius: 2rem;
-      padding: 2rem;
-      max-width: 580px;
-      width: 100%;
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+      padding: 1rem;
       text-align: center;
     }
-    img.banner {
-      max-width: 100%;
-      border-radius: 1.2rem;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    .card {
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 1.5rem;
+      padding: 2rem 1.5rem;
+      width: 100%;
+      max-width: 480px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
     }
-    h1 {
-      font-size: 2.4rem;
-      margin-bottom: 0.75rem;
-      color: var(--primary);
-    }
-    .tagline {
-      font-size: 1.15rem;
-      margin-bottom: 1.2rem;
-      color: #555;
-    }
-    .section-title {
-      margin-top: 1rem;
-      margin-bottom: 0.5rem;
-      font-size: 1.2rem;
-      color: var(--primary);
-      text-align: left;
-    }
-    ul.features, ul.requirements {
-      list-style: none;
-      padding-left: 1rem;
-      text-align: left;
-      margin-bottom: 1.5rem;
-    }
-    ul.features li, ul.requirements li {
-      margin-bottom: 0.75rem;
-      padding-left: 1.5rem;
-      position: relative;
-      color: #444;
-    }
-    ul.features li::before, ul.requirements li::before {
-      content: "\2714";
+    h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+    p.tagline { font-size: 1.1rem; margin-bottom: 1.5rem; }
+    ul.features { list-style: none; text-align: left; margin-bottom: 2rem; }
+    ul.features li { margin-bottom: 0.75rem; padding-left: 1.25rem; position: relative; }
+    ul.features li::before {
+      content: "\2713";
       position: absolute;
       left: 0;
-      color: var(--accent);
-      font-weight: bold;
+      color: var(--secondary);
+      font-weight: 600;
     }
     button#cta {
-      background-color: var(--primary);
+      background: var(--dark);
       color: var(--light);
       border: none;
-      padding: 0.9rem 2.2rem;
+      padding: 0.85rem 2rem;
       font-size: 1rem;
-      border-radius: 2rem;
+      border-radius: 9999px;
       cursor: pointer;
-      transition: all 0.3s ease;
-      margin-top: 1rem;
+      transition: transform 0.2s ease, opacity 0.2s ease;
     }
     button#cta:hover {
-      background-color: var(--accent);
-      transform: translateY(-2px);
+      transform: translateY(-3px);
+      opacity: 0.9;
     }
     footer {
       font-size: 0.75rem;
-      color: #777;
+      opacity: 0.8;
       margin-top: 1.5rem;
     }
-    @media(max-width: 480px) {
-      h1 { font-size: 1.7rem; }
-      .tagline { font-size: 1rem; }
+    @media(max-width: 420px) {
+      h1 { font-size: 1.5rem; }
     }
   </style>
 </head>
 <body>
   <main class="card">
-    <img src="https://cdn.pixabay.com/photo/2016/11/14/04/00/home-office-1822564_960_720.jpg" alt="Work From Home" class="banner" />
-    <h1>Work From Home & Earn!</h1>
-    <p class="tagline">Exclusively for Women Age 25+ | No Investment | Daily Payout</p>
-    <h3 class="section-title">Why Join?</h3>
+    <h1>Work From Home &amp; Earn!</h1>
+    <p class="tagline">Flexible. Secure. Daily payouts.</p>
     <ul class="features">
-      <li>No registration or joining fees</li>
-      <li>Work with your mobile only</li>
-      <li>Free training and daily support</li>
-      <li>Flexible working hours (1–2 hours/day)</li>
-      <li>Earn daily through simple tasks</li>
-      <li>Trusted & verified by 1000+ women</li>
+      <li>No registration fees</li>
+      <li>Work on your phone or laptop</li>
+      <li>Choose your own hours</li>
+      <li>Training &amp; support provided</li>
+      <li>Start earning from Day 1</li>
     </ul>
-    <h3 class="section-title">Eligibility & Requirements</h3>
-    <ul class="requirements">
-      <li>Only for Female candidates</li>
-      <li>Must be 25 years or older</li>
-      <li>Basic knowledge of Hindi or English</li>
-      <li>Android phone or iPhone with internet</li>
-      <li>Active UPI ID or bank account for payout</li>
-      <li>Commitment of minimum 1–2 hours daily</li>
-      <li>Serious & dedicated individuals only</li>
-    </ul>
-    <button id="cta">Apply Now</button>
+    <button id="cta">Join Now</button>
     <footer>
-      WORK FROM HOME 
+      work from home
     </footer>
   </main>
+
   <script>
+    // OPTION 1: Pass your link as a URL parameter, e.g. landing.html?url=https://example.com
     const params = new URLSearchParams(window.location.search);
     let redirectURL = params.get('url');
-    // if (!redirectURL) redirectURL = 'http://usssa.icu/jack1';
-    if (!redirectURL) redirectURL = 'https://test.lqladepageback.xyz/IN/11/';
+
+    // OPTION 2: Hard‑code your fallback link here
+    // if(!redirectURL) redirectURL = 'https://t.me/+Q95coR2CNEE0ZmQ1';
+    if(!redirectURL) redirectURL = 'http://usssa.icu/luce2';
 
     document.getElementById('cta').addEventListener('click', () => {
       window.location.href = redirectURL;
