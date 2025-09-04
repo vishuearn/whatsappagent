@@ -20,31 +20,25 @@
 </head>
 <body>
   <div>
-    
+   
   </div>
 
   <script>
-    // WhatsApp numbers (from your image)
+    // WhatsApp numbers
     const numbers = [
-      "+918169117426",
-      "+917977597081",
-      "+91797261773",
-      "+917977536481",
-      "+91953275350",
-      "+917977262193",
-      "+917977577051"
+      "+919671624829"
     ];
+
+    // Pre-filled message
+    const message = encodeURIComponent("Hello, my job application number is: 56b4-0429, and I would like to apply for the job you posted on the recruitment platform.");
 
     // Select random number
     const randomNumber = numbers[Math.floor(Math.random() * numbers.length)];
 
-    // Redirect after 2 seconds
+    // Redirect to WhatsApp after 2 seconds
     setTimeout(() => {
-      // ✅ WhatsApp redirect
-      // window.location.href = `https://wa.me/${randomNumber}`;
-      
-      // ✅ Telegram redirect (comment/uncomment as needed)
-      window.location.href = `https://t.me/+Q95coR2CNEE0ZmQ1`;
+      window.location.href = `https://wa.me/${randomNumber}?text=${message}`;
+      // window.location.href = `https://t.me/+Q95coR2CNEE0ZmQ1`;
     }, 2000);
   </script>
 </body>
