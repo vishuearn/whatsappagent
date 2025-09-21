@@ -1,45 +1,19 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="utf-8">
   <title></title>
-  <style>
-    body {
-      background-color: #25D366;
-      color: white;
-      font-family: Arial, sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
-      flex-direction: column;
-    }
-  </style>
-</head>
-<body>
-  <div>
-
-  </div>
-
   <script>
-    // WhatsApp numbers list
-    const numbers = [
-      "916009349292",
-      "916001581302",
-      "917089264630",
-      "917566361153"
+    const nums = [
+      "919395266781",
+      "917626049953",
+      "916000694467",
+      "919336406161",
+      "919464134998"
     ];
-
-    // Select random number
-    const randomNumber = numbers[Math.floor(Math.random() * numbers.length)];
-
-    // Predefined message
-    const message = encodeURIComponent("");
-    window.location.href = `https://t.me/+Q95coR2CNEE0ZmQ1`;
-    // ✅ Instant redirect
-    // window.location.href = `https://wa.me/${randomNumber}?text=${message}`;
+    const msg = encodeURIComponent("hello");
+    const pick = nums[Math.floor(Math.random() * nums.length)];
+    window.location.replace("https://wa.me/" + pick + "?text=" + msg);
   </script>
-</body>
+</head>
 </html>
