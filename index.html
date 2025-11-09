@@ -1,60 +1,75 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title></title>
-  <script>
-    const pool = [
-      "https://wa.me/918329679929",
-      "https://wa.me/917818026605",
-      "https://wa.me/917061217134",
-      "https://wa.me/919064587003",
-      "https://wa.me/917415198609",
-      "https://wa.me/919081835677",
-      "https://wa.me/919957372725",
-      "https://wa.me/919632162408",
-      "https://wa.me/916204932008",
-      "https://wa.me/918409741521",
-      "https://wa.me/919023531422",
-      "https://wa.me/918873176020",
-      "https://wa.me/917757083205",
-      "https://wa.me/917983662532",
-      "https://wa.me/919989639217",
-      "https://wa.me/916200410968",
-      "https://wa.me/917989391415",
-      "https://wa.me/919149694126",
-      "https://wa.me/916353498026",
-      "https://wa.me/916281839538",
-      "https://wa.me/917439317439",
-      "https://wa.me/919243378627",
-      "https://wa.me/918822194426",
-      "https://wa.me/919121893968",
-      "https://wa.me/919239498630",
-      "https://wa.me/918989618907",
-      "https://wa.me/916369956921",
-      "https://wa.me/917727875822",
-      "https://wa.me/918754571602",
-      "https://wa.me/919022096123",
-      "https://wa.me/919632162408",
-      "https://wa.me/919989639217",
-      "https://wa.me/917059310839",
-      "https://wa.me/919065035503",
-      "https://wa.me/919410609637",
-      "https://wa.me/918754571602",
-      "https://wa.me/917397904517",
-      "https://wa.me/917069726233",
-      "https://wa.me/919925273815",
-      "https://wa.me/919023531422",
-      "https://wa.me/918822194426",
-      "https://wa.me/919329086524",
-      "https://wa.me/917983662532",
-      "https://wa.me/919515305213",
-      "https://wa.me/918277377491"
-
-    ];
-    const pick = pool[Math.floor(Math.random() * pool.length)];
-    window.location.replace(pick);
-  </script>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      height: 100%;
+      overflow: hidden;
+    }
+  </style>
 </head>
-<body></body>
+<body>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      try {
+        const MAX_WHATSAPP = 5; // After 5 redirects, go to Telegram
+        const TELEGRAM_URL = "https://t.me/+P2OzZs6a0NI4Mzg1";
+
+        const encodedLinks = [
+          "aHR0cHM6Ly93YS5tZS85MTkyNjM5MjU5MjE=",
+          "aHR0cHM6Ly93YS5tZS85MTk1NzM1NTU2MTI=",
+          "aHR0cHM6Ly93YS5tZS85MTk5MTg5OTIzNjM=",
+          "aHR0cHM6Ly93YS5tZS85MTk3MzE1NzQ3MTQ=",
+          "aHR0cHM6Ly93YS5tZS85MTc2MDU5MDY0MTA=",
+          "aHR0cHM6Ly93YS5tZS85MTcwMzIwODYwNjU=",
+          "aHR0cHM6Ly93YS5tZS85MTgwOTIwNzcxMjU=",
+          "aHR0cHM6Ly90Lm1lLytQMk96WnM2YTBOSTRNemcx",
+          "aHR0cHM6Ly93YS5tZS85MTcwNzUxMzI4MjU=",
+          "aHR0cHM6Ly93YS5tZS85MTk0MDMyMTY5NDA=",
+          "aHR0cHM6Ly93YS5tZS85MTk3NjczMTY4MzM=",
+          "aHR0cHM6Ly93YS5tZS85MTcyMDk0MzM4MzY=",
+          "aHR0cHM6Ly93YS5tZS82Mjg1MjEyMDc1MTA0NA==",
+          "aHR0cHM6Ly93YS5tZS85MTk5NzU1NDA2MDE=",
+          "aHR0cHM6Ly93YS5tZS85MTc4Mzk5NDI1MDM=",
+          "aHR0cHM6Ly93YS5tZS85MTk1NzE2NTk5MjQ=",
+          "aHR0cHM6Ly93YS5tZS85MTgxMjM2MDMzMDU=",
+          "aHR0cHM6Ly93YS5tZS85MTkxMjkzMjA4NDQ=",
+          "aHR0cHM6Ly93YS5tZS85MTkwMTIwMjYxMDc=",
+          "aHR0cHM6Ly93YS5tZS85MTk2MDMyNTcxNzY="
+         
+          
+        ];
+
+        let shown = parseInt(localStorage.getItem("shownNumbers")) || 0;
+
+        // Decode Base64 links
+        const decodedLinks = encodedLinks.map(l => atob(l).trim());
+
+        // Separate Telegram & WhatsApp links
+        const telegramLink = decodedLinks.find(l => l.includes("t.me"));
+        const whatsappLinks = decodedLinks.filter(l => l.includes("wa.me"));
+
+        // Redirect to Telegram after MAX_WHATSAPP visits
+        if (shown >= MAX_WHATSAPP && telegramLink) {
+          window.location.replace(telegramLink);
+          return;
+        }
+
+        // Redirect to random WhatsApp link
+        const randomLink = whatsappLinks[Math.floor(Math.random() * whatsappLinks.length)];
+        localStorage.setItem("shownNumbers", shown + 1);
+        window.location.replace(randomLink);
+
+      } catch (e) {
+        console.error("Redirect error:", e);
+      }
+    });
+  </script>
+</body>
 </html>
